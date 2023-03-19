@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fonts Playground</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mystery+Quest&family=Noto+Emoji&family=Noto+Sans+TC&family=Noto+Serif+TC&family=Roboto+Condensed&family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: "jf-openhuninn";
+      src: url("jf-openhuninn-2.0.ttf");
+    }
+    @font-face {
+      font-family: Tofu;
+      src: url("data:font/ttf;base64,AAEAAAAKAIAAAwAgT1MvMkWnTqsAAAEoAAAAYGNtYXAALQDKAAABkAAAAFhnbHlmO2FM+QAAAfAAAAAsaGVhZCEIFXYAAACsAAAANmhoZWEHbgNUAAAA5AAAACRobXR4BBoAAAAAAYgAAAAGbG9jYQAWAAAAAAHoAAAABm1heHAABAAMAAABCAAAACBuYW1l6hJPCQAAAhwAAAFHcG9zdAADAAAAAANkAAAAIAABAAAAAQAAda6RkF8PPPUAAwQAAAAAAN826K8AAAAA3zborwCWAAAC7gMgAAAAAwACAAAAAAAAAAEAAAPo/zgAAAOEAJYAlgLuAAEAAAAAAAAAAAAAAAAAAAABAAEAAAACAAoAAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAwOEAZAABQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///////////////8H////Pz8/PwAAAAH//wPoAAAAAAPoAMgAAAAAAAAAAAAAAAAAAAAgAAADhAAAAJYAAAAAAAMAAAADAAAAHAADAAEAAAAcAAMACgAAADwABAAgAAAABAAEAAEAAAAB//8AAAAB//8AAAABAAAAAAANAAAAAAAcAAAAAAAAAAEAAAACABD//wAAAAEAAAAAABYAAAABAJYAAALuAyAACQAAMxEhESE3IREhEZYCWP2oMgH0/gwDIPzgMgK8/UQAAAAADACWAAEAAAAAAAEABAAAAAEAAAAAAAIABwAEAAEAAAAAAAMAGQALAAEAAAAAAAQADAAkAAEAAAAAAAUACwAwAAEAAAAAAAYADAAkAAMAAQQJAAEACAA7AAMAAQQJAAIADgBDAAMAAQQJAAMAMgBRAAMAAQQJAAQAGACDAAMAAQQJAAUAFgCbAAMAAQQJAAYAGACDVG9mdVJlZ3VsYXJmb250QnVpbGRlcjogVG9mdS5SZWd1bGFyVG9mdS1SZWd1bGFyVmVyc2lvbiAwLjEAVABvAGYAdQBSAGUAZwB1AGwAYQByAGYAbwBuAHQAQgB1AGkAbABkAGUAcgA6ACAAVABvAGYAdQAuAFIAZQBnAHUAbABhAHIAVABvAGYAdQAtAFIAZQBnAHUAbABhAHIAVgBlAHIAcwBpAG8AbgAgADAALgAxAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+    }
+    header {
+      font-size: 32px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-block-end: 16px;
+    }
+    textarea, select {
+      display: inline-block;
+      padding: 4px 8px;
+      font-size: 16px;
+    }
+    input[type="checkbox"] {
+      display: inline-block;
+      height: 24px;
+      width: 24px;
+    }
+    #text {
+      overflow-x: auto;
+      resize: horizontal;
+    }
+    table {
+      border-collapse: collapse;
+      display: grid;
+      grid-template-columns: repeat(2, max-content);
+    }
+    table tr {
+      height: 100%;
+      display: grid;
+      grid-auto-rows: 1fr;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 2px 4px;
+      display: grid;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <label for="text">Text:</label>
+    <textarea wrap="off" name="text" id="text" rows="1" cols="60"></textarea>
+    <label for="size">Size:</label>
+    <select id="size" name="size">
+      <option value="14px">14px</option>
+      <option value="24px">24px</option>
+      <option value="48px">48px</option>
+      <option value="72px">72px</option>
+      <option value="96px">96px</option>
+    </select>
+    <label for="tofu">Tofu</label>
+    <input type="checkbox" name="tofu" id="tofu" checked>
+  </header>
+
+  <table id="table">
+    <thead>
+      <tr>
+        <th>Noto Sans Traditional Chinese</th>
+        <th>Noto Serif Traditional Chinese</th>
+        <th>Roboto Condensed</th>
+        <th>Source Code Pro</th>
+        <th>Mystery Quest</th>
+        <th>Noto Emoji</th>
+        <th>jf open 粉圓</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="font-family: 'Noto Sans TC', 'Tofu';" data-font-fallback="sans-serif"></td>
+        <td style="font-family: 'Noto Serif TC', 'Tofu';" data-font-fallback="serif"></td>
+        <td style="font-family: 'Roboto Condensed', 'Tofu';" data-font-fallback="sans-serif"></td>
+        <td style="font-family: 'Source Code Pro', 'Tofu';" data-font-fallback="monospace"></td>
+        <td style="font-family: 'Mystery Quest', 'Tofu';" data-font-fallback="cursive"></td>
+        <td style="font-family: 'Noto Emoji', 'Tofu';" data-font-fallback="sans-serif"></td>
+        <td style="font-family: 'jf-openhuninn', 'Tofu';" data-font-fallback="sans-serif"></td>
+      </tr>
+    </tbody>
+  </table>
+  <script>
+    const inputEl = document.querySelector('#text');
+    const updateText = (text) => {
+      for (const tdEl of document.querySelectorAll('tbody td')) {
+        tdEl.textContent = text;
+      }
+    }
+    inputEl.value='喝一杯 \u2615\ufe0e～ Get some coffin \u2615\ufe0f！コーヒーを飲んで休憩しよう\u2615'
+    updateText(inputEl.value);
+    inputEl.oninput = (event) => updateText(event.target.value);
+
+    const selectEl = document.querySelector('#size');
+    const updateSize = (size) => {
+      const tableEl = document.querySelector('#table');
+      tableEl.style.fontSize = size;
+    }
+    updateSize(selectEl.value);
+    selectEl.oninput = (event) => updateSize(event.target.value);
+
+    const checkboxEl = document.querySelector('#tofu');
+    const updateTofu = (checked) => {
+      for (const tdEl of document.querySelectorAll('tbody td')) {
+        const mainFont = tdEl.style.fontFamily.split(',').shift();
+        tdEl.style.fontFamily = [
+          mainFont,
+          checked ? "'Tofu'" : tdEl.dataset.fontFallback
+        ].join(', ')
+      }
+    }
+    updateTofu(checkboxEl.checked)
+    checkboxEl.oninput = (event) => updateTofu(event.target.checked);
+  </script>
+</body>
+</html>
